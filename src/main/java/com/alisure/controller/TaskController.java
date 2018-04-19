@@ -67,7 +67,7 @@ public class TaskController {
     @ApiOperation(value="update task status", httpMethod="GET", response = Result.class, nickname = "ALISURE")
     public Result updateTaskStatus(
             @ApiParam(name = "tid", value = "tid") @PathVariable int tid,
-            @ApiParam(name = "means: 0 表示确认完成，1 表示取消", value = "means") @RequestParam int means){
+            @ApiParam(name = "    means: 0 表示确认完成，1 表示取消, 2 表示重新发布", value = "means") @RequestParam int means){
         return new Result(taskService.updateTaskStatus(tid, means, commonService.getUserId(request)));
     }
 

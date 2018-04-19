@@ -30,36 +30,36 @@ var Status = {
     Status_Path_Error: 5
 };
 
-$(function () {
+$(function() {
 
     /*配置微信*/
     var url = location.href;
-    var jsApiList = ["chooseImage","uploadImage","downloadImage","closeWindow"];
+    var jsApiList = ["chooseImage", "uploadImage", "downloadImage", "closeWindow"];
 
     /* 获取签名 */
-    getSignature(url, function (appId, timestamp, nonceStr, signature) {
+    getSignature(url, function(appId, timestamp, nonceStr, signature) {
         /* 配置签名等信息 */
         config(appId, timestamp, nonceStr, signature, jsApiList);
     });
 
     /* 通过ready接口处理成功验证 */
-    ready(function () {
+    ready(function() {
         console.log(LogInfo.CheckReady);
     });
 
     /* 发生错误时调用 */
-    error(function () {
+    error(function() {
         console.log(ErrorInfo.WXCheckError);
     });
 
     /* 检查是否支持指定的API */
-    check(jsApiList, function (res) {
+    check(jsApiList, function(res) {
         /* 不支持指定JS接口 */
         console.log(ErrorInfo.CheckJsApiError);
     });
 
     /* ajax 异常*/
-    $(document).ajaxError(function(){
+    $(document).ajaxError(function() {
         $.hideLoading();
         $.toast("发生异常", "text");
     });
@@ -71,8 +71,8 @@ $(function () {
  * @param callback 配置签名等信息
  */
 function getSignature(url, callback) {
-    $.get(SignatureUrl, {url:url},
-        function (data) {
+    $.get(SignatureUrl, { url: url },
+        function(data) {
             if (data.status == 1) {
                 var object = data.data;
                 /*成功后执行回调*/
@@ -93,14 +93,14 @@ function getSignature(url, callback) {
  * @param signature
  * @param jsApiList
  */
-function config(appId,timestamp, nonceStr, signature, jsApiList) {
+function config(appId, timestamp, nonceStr, signature, jsApiList) {
     /*通过config接口注入权限验证配置*/
     wx.config({
         debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
         appId: appId, // 必填，公众号的唯一标识
         timestamp: timestamp, // 必填，生成签名的时间戳
         nonceStr: nonceStr, // 必填，生成签名的随机串
-        signature: signature,// 必填，签名，见附录1
+        signature: signature, // 必填，签名，见附录1
         jsApiList: jsApiList // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
     });
 }
@@ -109,8 +109,8 @@ function config(appId,timestamp, nonceStr, signature, jsApiList) {
  * @param callback
  */
 function ready(callback) {
-    wx.ready(function () {
-        if(typeof callback == "function") callback();
+    wx.ready(function() {
+        if (typeof callback == "function") callback();
     });
 }
 /**
@@ -119,8 +119,8 @@ function ready(callback) {
  */
 function error(callback) {
     /*通过error接口处理失败验证*/
-    wx.error(function () {
-        if(typeof callback == "function") callback();
+    wx.error(function() {
+        if (typeof callback == "function") callback();
     });
 }
 
@@ -129,7 +129,7 @@ function error(callback) {
  * @param jsApiList
  * @param failCallBack
  */
-function check(jsApiList,failCallBack) {
+function check(jsApiList, failCallBack) {
     /*判断当前客户端版本是否支持指定JS接口*/
     wx.checkJsApi({
         jsApiList: jsApiList,
@@ -147,16 +147,16 @@ function check(jsApiList,failCallBack) {
  * @param mediaId
  * @param callback
  */
-function downImage(mediaId,callback) {
-    $.get(DownImageUrl, {mediaId:mediaId}, callback);
+function downImage(mediaId, callback) {
+    $.get(DownImageUrl, { mediaId: mediaId }, callback);
 }
 
 
 /*关闭当前页面或者返回*/
 function closeWindowOrBack(isClose) {
-    if(isClose){
+    if (isClose) {
         wx.closeWindow();
-    }else{
+    } else {
         history.back();
     }
 }
@@ -165,9 +165,9 @@ function closeWindowOrBack(isClose) {
 function getRoot() {
     var href = location.href;
     href = href.split(project);
-    if(href.length >= 2){
+    if (href.length >= 2) {
         return href[0] + project + "/";
-    }else{
+    } else {
         return location.host + "/";
     }
 }
@@ -175,13 +175,14 @@ function getRoot() {
 
 /* url search */
 function getSearchValue(search, key) {
-    if(search && key){
+    if (search && key) {
         search = search.charAt(0) == "?" ? search.substring(1) : search;
         var values = search.split("&");
-        var i = 0, len = values.length;
-        for(i; i < len; i++){
+        var i = 0,
+            len = values.length;
+        for (i; i < len; i++) {
             var value = values[i].split("=");
-            if(value[0] === key){
+            if (value[0] === key) {
                 return value[1];
             }
         }
@@ -192,15 +193,15 @@ function getSearchValue(search, key) {
 
 /* 截短字符串 */
 function subString(str, i, end) {
-    if(!str) return "";
+    if (!str) return "";
     return str.length > i ? str.substr(0, i) + end : str;
 }
 
 
 /*获取增加hour小时后的时间当前时间*/
 function getTimeAddHour(hour) {
-    if(hour == undefined) hour = 0;
-    var timestamp=new Date().getTime();
+    if (hour == undefined) hour = 0;
+    var timestamp = new Date().getTime();
     var date = new Date(timestamp + hour * 60 * 60 * 1000);
 
     var month = date.getMonth() + 1;
@@ -218,10 +219,11 @@ function getTimeAddHour(hour) {
 
 /*切换学校*/
 function change_school_alert() {
-    $.alert("为了提供适合您的任务，请选择您所在的学校！", function () {
+    $.alert("为了提供适合您的任务，请选择您所在的学校！", function() {
         change_school();
     });
 }
+
 function change_school() {
-    location.href = "selectSchool.html";
+    location.href = "user-edit.html";
 }

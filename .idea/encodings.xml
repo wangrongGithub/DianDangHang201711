@@ -1,8 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/src/main/java/com/alisure/entity/FinalString.java" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/alisure/controller/CommentController.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/alisure/controller/TaskController.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/alisure/controller/UserController.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/alisure/controller/WeiXinController.java" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/alisure/dao/TaskDao.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/alisure/dao/UserDao.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/alisure/entity/InfoMoneyChange.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/alisure/entity/InfoTask.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/alisure/service/CommonService.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/alisure/service/TaskService.java" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/alisure/service/TaskService.java" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/alisure/service/UserService.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/alisure/service/WeixinService.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/alisure/tool/core/CoreAlisure.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/alisure/tool/core/CoreAlisure.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/alisure/tool/core/CoreException.java" charset="GBK" />
@@ -16,13 +27,39 @@
     <file url="file://$PROJECT_DIR$/src/main/java/com/alisure/tool/core/CoreProperties.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/alisure/tool/core/CoreProperties.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/alisure/tool/core/CoreSystemProperty.java" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/alisure/tool/core/CoreSystemProperty.java" charset="GB2312" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/alisure/tool/core/CoreTime.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/alisure/tool/core/CoreTime.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/alisure/weixin/AllURL.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/alisure/weixin/menu/Menu.java" charset="GB2312" />
-    <file url="file://$PROJECT_DIR$/src/main/java/com/alisure/weixin/message/resp/Article.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/java/com/alisure/weixin/message/resp/BaseMessage.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/java/com/alisure/weixin/message/resp/WxTemplate.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/alisure/weixin/menu/Menu.java" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/alisure/weixin/template/Template.java" charset="GB2312" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/alisure/weixin/template/Template.java" charset="GB2312" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/alisure/weixin/template/Template2.java" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/alisure/weixin/template/Template2.java" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/src/main/main/java/com/alisure/controller/CommentController.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/main/java/com/alisure/controller/TaskController.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/main/java/com/alisure/controller/UserController.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/main/java/com/alisure/controller/WeiXinController.java" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/src/main/main/java/com/alisure/dao/TaskDao.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/main/java/com/alisure/dao/UserDao.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/main/java/com/alisure/entity/InfoMoneyChange.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/main/java/com/alisure/entity/InfoTask.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/main/java/com/alisure/service/CommonService.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/main/java/com/alisure/service/TaskService.java" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/src/main/main/java/com/alisure/service/UserService.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/main/java/com/alisure/service/WeixinService.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/main/java/com/alisure/tool/core/CoreAlisure.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/main/java/com/alisure/tool/core/CoreException.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/main/java/com/alisure/tool/core/CoreFile.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/main/java/com/alisure/tool/core/CoreImage.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/main/java/com/alisure/tool/core/CoreNetwork.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/main/java/com/alisure/tool/core/CoreProperties.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/main/java/com/alisure/tool/core/CoreSystemProperty.java" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/src/main/main/java/com/alisure/tool/core/CoreTime.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/main/java/com/alisure/weixin/AllURL.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/main/java/com/alisure/weixin/menu/Menu.java" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/src/main/main/java/com/alisure/weixin/template/Template.java" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/src/main/main/java/com/alisure/weixin/template/Template2.java" charset="GB2312" />
   </component>
 </project>

@@ -1,8 +1,17 @@
 /*强调色*/
+
+
 /*输入框的颜色*/
+
+
 /*按钮的颜色*/
+
+
 /*item的颜色*/
+
+
 /*搜索提示内容的颜色*/
+
 .goods-wrapper {
     width: 100%;
 }
@@ -50,7 +59,7 @@
 
 .goods-wrapper .left-user .name {
     text-align: center;
-    font-size: 1.0em;
+    font-size: 0.8em;
 }
 
 .goods-wrapper .right-goods .top {
@@ -86,6 +95,7 @@
 }
 
 .goods-wrapper .right-goods .describe p {
+    font-size: 14px;
     height: 40px;
     max-height: 40px;
     min-height: 40px;
@@ -102,6 +112,7 @@
     background: url("../img/index/task_place.png") no-repeat left 4px;
     background-size: 10px 13px;
 }
+
 .goods-wrapper .right-goods .time {
     float: left;
     margin: 5px 0;

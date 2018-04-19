@@ -91,4 +91,10 @@ public class TaskDao {
         String sql = "select * from t_category";
         return jdbcTemplate.query(sql, new InfoCategory());
     }
+
+    public boolean setRePub(int tid) {
+        /*先判断能否重新发布：处于取消状态才能重新发布*/
+        String sql = "update t_task set recId=NULL, recStateId=1, pubStateId=1, recTime=NULL, recCancelTime=NULL, pubCancelTime=NULL where tid=? and (recStateId = 3 or pubStateId = 3)";
+        return jdbcTemplate.update(sql, new Object[]{tid}) > 0;
+    }
 }

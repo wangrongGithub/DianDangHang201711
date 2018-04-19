@@ -135,12 +135,12 @@ public class TaskService {
     /**
      * 更新任务的状态
      * @param tid
-     * @param means：0：确认完成，1：取消
+     * @param means：0：确认完成，1：取消， 2：重新发布
      * @param userId
      * @return
      */
     public boolean updateTaskStatus(int tid, int means, int userId) {
-        if(tid <= 0 || means < 0 || means > 1 || userId <= 0) return false;
+        if(tid <= 0 || means < 0 || means > 2 || userId <= 0) return false;
         InfoTask infoTask = taskDao.getTask(tid);
         infoTask.setPub(commonDao.getUser(infoTask.getPubId()));
         if(infoTask.getRecId() > 0){
@@ -164,6 +164,17 @@ public class TaskService {
                     return userService.updateCoinsByTask(infoTask.getRecId(), infoTask.getTid(), infoTask.getCoins(), InfoMoneyChange.ChangeReason.Reason_End_Task);
                 }
             }
+        }else if(means == 2){ //重新发布
+            if(infoTask.getPubId() == userId){  // 如果用户是发布者
+                if(taskDao.setRePub(tid)){
+                    // 在这里向微信中发送信息
+                    // ...
+
+                    // 此时还应该处理积分问题
+                    return userService.updateCoinsByTask(infoTask.getPubId(), infoTask.getTid(), 0 - infoTask.getCoins(), InfoMoneyChange.ChangeReason.Reason_Publish_Task);
+                }
+            }
+            return false;
         }else{ // 取消，把金币还给发布者
             if(infoTask.getRecId() == userId){ // 如果用户是接手者
                 if(taskDao.setRecSituation(3, tid, CoreTime.getDataTime())){

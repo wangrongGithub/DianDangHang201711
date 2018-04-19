@@ -2,30 +2,6 @@
     margin-top: 0px;
 }
 
-.user-bg {
-    background: #000 url('../images/background.jpg') no-repeat center center;
-    background-size: cover;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    z-index: -1;
-}
-
-.user-bg-blur {
-    filter: blur(10px);
-}
-
-.user-backindex {
-    width: 100%;
-}
-
-.user-backindex img {
-    width: 35px;
-    height: 35px;
-    margin-left: 10px;
-    margin-top: 5px;
-}
-
 .user-name {
     text-align: right;
 }
@@ -34,6 +10,10 @@
     width: 60px;
     height: 60px;
     border-radius: 50%;
+}
+
+.card_title {
+    margin-top: 5px;
 }
 
 .user-card-show,
@@ -65,7 +45,7 @@
 
 /* 修改RADIO样式 */
 
-.gender-edit label {
+.gender-edit .gender-edit label {
     display: inline;
 }
 

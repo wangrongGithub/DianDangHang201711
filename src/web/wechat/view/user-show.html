@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,width=device-width,initial-scale=1.0" />
 
     <title>个人资料</title>
 
@@ -13,20 +13,15 @@
 </head>
 
 <body>
-    <div class="user-info-show" id="user-info-show">
-        <!-- 返回 主页面-->
-        <div class="user-backindex">
-            <a href="index.html"><img src="../img/personcenter/index-green.png"></a>
-        </div>
+    <div class="user-info-show" id="user-info-show" user-id="">
         <div class="weui-cells my-user-cells">
-            <div class="user-bg user-bg-blur"></div>
             <div class="weui-cell" id="headPortrait">
                 <div class="weui-cell__hd">
                     <img class="headimg" src="">
                 </div>
                 <div class="weui-cell__bd">
                 </div>
-                <div class="weui-cell__ft" id="user-name">会飞的鱼</div>
+                <div class="weui-cell__ft" id="user-name"></div>
             </div>
             <div class="weui-cell">
                 <div class="weui-cell__bd">
@@ -38,7 +33,7 @@
                 <div class="weui-cell__bd">
                     <p>地区</p>
                 </div>
-                <div class="weui-cell__ft" id="user-address">陕西 西安</div>
+                <div class="weui-cell__ft" id="user-address"></div>
             </div>
             <div class="weui-cell">
                 <div class="weui-cell__bd">
@@ -50,24 +45,24 @@
                 <div class="weui-cell__bd">
                     <p>手机号</p>
                 </div>
-                <div class="weui-cell__ft" id="user-tel">18292574525</div>
+                <div class="weui-cell__ft" id="user-tel" style="display:none;"></div>
             </div>
         </div>
         <div class="weui-cells__title">一卡通或学生证等证件上传</div>
         <div class="user-card-show" id="user-card-show">
-            <img src="../img/personCenter/person-card.jpg">
+            <img src="../img/personCenter/uerCardInit.png">
         </div>
         <div class="user-edit-btn" style="display:none;"><a href="user-edit.html" class="weui-btn weui-btn_primary user-edit-btn">编辑</a></div>
     </div>
-    <script src="../../common/js/jquery-2.1.4.js"></script>
-    <script src="../../common/js/fastclick.js"></script>
+    <!-- common js -->
+    @@include("include/common-js.html", {"info": "this is info."})
+    <!-- common js -->
     <script>
         $(function() {
             FastClick.attach(document.body);
         });
     </script>
-    <script src="../../common/js/jquery-weui.js"></script>
-    <script src="../js/user-info.js"></script>
+    <script src="../js/user-info-show.js"></script>
 
 </body>
 

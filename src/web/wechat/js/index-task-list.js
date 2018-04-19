@@ -1,31 +1,31 @@
 /*
-* 任务类型和任务列表
-* */
-$(function () {
+ * 任务类型和任务列表
+ * */
+$(function() {
 
     var page = 1;
     var page_size = 12;
     var type_id = 0;
     var sort_id = 1;
-    var schoolName = "";  //学校
-    var loading = true;  //状态标记
-    var over = false;  // 当前类型没有任务了
+    var schoolName = ""; //学校
+    var loading = true; //状态标记
+    var over = false; // 当前类型没有任务了
 
     /*初始化排序*/
     initSort();
     /*先初始化学校和类型，完成后初始化任务列表*/
-    initSchool(function () {
+    initSchool(function() {
         initTaskList();
-    },function () {
+    }, function() {
         initTypeClick();
     });
 
     /*初始化排序*/
     function initSort() {
         /* 点击排序 */
-        $("#indexSort div").click(function () {
+        $("#indexSort div").click(function() {
             var sort_id_now = $(this).attr("data-id");
-            if(sort_id_now == sort_id) return;
+            if (sort_id_now == sort_id) return;
             sort_id = sort_id_now;
             $(this).addClass("current").siblings().removeClass("current");
             page = 1;
@@ -34,7 +34,7 @@ $(function () {
         });
 
         /* 点击刷新 */
-        $("#indexSortRight .page-refresh").click(function () {
+        $("#indexSortRight .page-refresh").click(function() {
             page = 1;
             over = false;
             initTaskGetTaskByPage();
@@ -42,38 +42,38 @@ $(function () {
     }
 
     /*初始化学校*/
-    function initSchool(callback_initTaskList, callback_typeClick){
+    function initSchool(callback_initTaskList, callback_typeClick) {
         /*获取类型数据*/
-        $.get(ServerUrl + "school/getSchool", function (data) {
-            if(data.status == Status.Status_NULL_Result || (data.status == Status.Status_OK && (!data.data.schoolName || data.data.schoolName.length <= 0))){
+        $.get(ServerUrl + "school/getSchool", function(data) {
+            if (data.status == Status.Status_NULL_Result || (data.status == Status.Status_OK && (!data.data.schoolName || data.data.schoolName.length <= 0))) {
                 /*还没有选择学校*/
                 change_school_alert();
-            }else if(data.status == Status.Status_OK){
+            } else if (data.status == Status.Status_OK) {
                 schoolName = data.data.schoolName;
                 /*初始化学校*/
-                $("#school").text(schoolName);
+                $("#school").text(subString(schoolName, 4, "..."));
                 /*设置学校的点击事件*/
-                $("#change-school").click(function () {
+                $("#change-school").click(function() {
                     change_school();
                 });
                 /*初始化学校之后，初始化类型*/
                 initTaskType(callback_initTaskList, callback_typeClick);
-            }else{
+            } else {
                 $.toast("学校获取错误");
             }
         });
     }
 
     /*初始化类型*/
-    function initTaskType(callback_initTaskList, callback_typeClick){
+    function initTaskType(callback_initTaskList, callback_typeClick) {
         /*获取类型数据*/
-        $.get(ServerUrl + "task/category", function (data) {
-            if(data.status == Status.Status_OK){
+        $.get(ServerUrl + "task/category", function(data) {
+            if (data.status == Status.Status_OK) {
                 var types = data.data;
                 /*初始化类型*/
                 var $sorHtml = $("#indexTaskTypeData");
                 var $desHtml = $("#indexTaskTypeDataWrapper").empty();
-                for (var i in types){
+                for (var i in types) {
                     $sorHtml.children("div").attr("data-id", types[i].catId);
                     $sorHtml.find("img").attr("src", types[i].categoryIcon);
                     $sorHtml.find("p").text(types[i].category);
@@ -86,7 +86,7 @@ $(function () {
                 callback_typeClick();
                 /*初始化类型之后，执行回调*/
                 callback_initTaskList();
-            }else{
+            } else {
                 $.toast("数据获取错误");
             }
         });
@@ -95,9 +95,9 @@ $(function () {
     /*设置点击事件*/
     function initTypeClick() {
         /* 点击类型 */
-        $("#indexTaskTypeDataWrapper").children("div").on("click", function () {
+        $("#indexTaskTypeDataWrapper").children("div").on("click", function() {
             var id = $(this).attr("data-id");
-            if(id == type_id) return;
+            if (id == type_id) return;
             type_id = id;
             $(this).addClass("current").siblings().removeClass("current");
             /*刷新*/
@@ -112,10 +112,10 @@ $(function () {
         /*初始化*/
         initTaskGetTaskByPage();
 
-        $("#tab1").infinite().on("infinite", function() {
+        $("body").infinite().on("infinite", function() {
             /*如果当前类型没有结束，则继续*/
-            if(!over){
-                if(loading) return;
+            if (!over) {
+                if (loading) return;
                 page += 1;
                 initTaskGetTaskByPage();
             }
@@ -125,14 +125,13 @@ $(function () {
 
     function initTaskGetTaskByPage() {
         loading = true;
-        if(page == 1){
+        if (page == 1) {
             $("#task-list").empty();
         }
-
         $("#task-load-more").show();
         $("#show-no-data").hide();
 
-        getTaskByPage(page, page_size, type_id, sort_id, schoolName, function () {
+        getTaskByPage(page, page_size, type_id, sort_id, schoolName, function() {
             loading = false;
             $("#task-load-more").hide();
         });
@@ -140,24 +139,23 @@ $(function () {
 
     /* 获取数据并显示 */
     function getTaskByPage(page, size, type_id, sort_id, school, callback) {
-        if(over){
+        if (over) {
             callback();
         }
-        
+
         /*联网获取数据*/
-        $.get( ServerUrl + "task/taskhall", {
+        $.get(ServerUrl + "task/taskhall", {
             page: page,
             pageSize: size,
             type: type_id,
             sortType: sort_id,
             school: school
-        }, function (data) {
-            if(data.status == Status.Status_OK){
+        }, function(data) {
+            if (data.status == Status.Status_OK) {
                 var datas = data.data;
-
                 var $goods = $("#task-list");
                 /*刷新*/
-                if(page == 1)$goods.empty();
+                if (page == 1) $goods.empty();
 
                 for (var i = 0; i < datas.length; i++) {
                     /*需要将数据传给build()*/
@@ -170,9 +168,9 @@ $(function () {
                 /*设置点击事件*/
                 clickEvent();
 
-            }else{
+            } else {
                 over = true;
-                if(page == 1){
+                if (page == 1) {
                     $("#show-no-data").show();
                 }
                 /* 显示没有任务了 */
@@ -187,14 +185,21 @@ $(function () {
     function build(data) {
         /*对data进行处理*/
         var $html = $("#taskData");
-        $html.find(".image img").attr("src",data.pub.headimgurl);
-        $html.find(".money span").text(data.pub.goldCoins);
-        $html.find(".name").text(subString(data.pub.nickname, 4, "..."));
+        if (data.pub.length != 0) { //避免出现用户已注销，任务还在大厅的情况
+            $html.find(".image img").attr("src", data.pub.headimgurl);
+            $html.find(".money span").text(data.pub.goldCoins);
+            $html.find(".name").text(subString(data.pub.nickname, 3, "..."));
+        }
         $html.find(".type").text(data.category.category);
         $html.find(".title").text(subString(data.title, 14, "..."));
         $html.find(".time-content").text(data.pubTime);
         $html.find(".describe p").text(data.content);
-        $html.find(".place span").text(subString(data.place, 24, "..."));
+        //暂时解决无地址item页面偏移问题
+        if (data.place.length == 0) {
+            $html.find(".place span").text("未填写地址");
+        } else {
+            $html.find(".place span").text(subString(data.place, 24, "..."));
+        }
         $html.find(".right-goods").attr("data-id", data.tid);
         $html.find(".left-user").attr("data-user", data.pubId);
         return $html.html();
@@ -203,13 +208,13 @@ $(function () {
     /*设置点击事件*/
     function clickEvent() {
         /*点击goods*/
-        $("#taskWrapper .goods-wrapper .content .right-goods").off("click").on("click", function () {
+        $("#taskWrapper .goods-wrapper .content .right-goods").off("click").on("click", function() {
             var id = $(this).attr("data-id");
             location.href = "task.html?id=" + id;
         });
 
         /*点击头像*/
-        $("#taskWrapper .goods-wrapper .content .left-user .image").off("click").on("click", function () {
+        $("#taskWrapper .goods-wrapper .content .left-user .image").off("click").on("click", function() {
             var user = $(this).parent().attr("data-user");
             location.href = "user-show.html?id=" + user;
         });

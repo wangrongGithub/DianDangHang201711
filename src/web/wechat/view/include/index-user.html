@@ -1,35 +1,38 @@
 <div class="weui-tab">
     <div class="personal-main-top">
-        <img class="personal-main-top-blur" src="../img/personCenter/person-img.jpg">
+        <img class="personal-main-top-blur" src="../img/personCenter/perCenterBg.png">
         <!--个人中心-个人资料-->
         <div class="personal-main-top-body">
-            <div class="personal-main-top-user">
-                <div class="personal-main-top-user-img" data-id="1">
-                    <img src="../img/personCenter/person-img.jpg">
-                </div>
-                <div class="personal-main-top-username">
-                    <p name="username" id="username">会飞的鱼</p>&nbsp;
-                    <img src="../img/personCenter/gender-girl.png">
-                </div>
-                <p name="userschool" id="user_school" data-id="1">西安电子科技大学</p>
-            </div>
+            <!-- 账户值 -->
             <div class="personal-main-top-money" data-id="1">
                 <p>账户值：</p>
-                <p id="user_golds">200</p>
+                <p id="user_golds">0</p>
                 <img src="../img/personCenter/icon_gold.png">
+            </div>
+            <!-- 基本信息及入口 -->
+            <div class="personal-main-top-user">
+                <div class="personal-main-top-user-img" user-id="1">
+                    <img src="">
+                </div>
+                <div class="personal-main-top-username">
+                    <p name="username" id="user-name">还未填写名字</p>&nbsp;
+                    <img src="../img/personCenter/gender-boy.png">
+                </div>
+                <p name="userschool" id="user-school" school-id="1">西安电子科技大学</p>
             </div>
 
         </div>
-        <!-- 切换 -->
-        <div class="personal-main-top-navbar">
-            <a class="personal-main-top-navbar-item personal-main-top-navbar-item-on" href="#my-task-page">
-                我的任务
-            </a>
-            <div class="vertical-bar-line" name="line"></div>
-            <a class="personal-main-top-navbar-item" href="#my-publish-page">
-                我的发布
-            </a>
-        </div>
+    </div>
+    <!-- 切换 -->
+    <div class="personal-main-top-navbar">
+        <a class="personal-main-top-navbar-item personal-main-top-navbar-item-on" href="#my-task-page">
+            我的任务
+            <div class="bottom-line bottom-line-on" style="display:none;"></div>
+        </a>
+        <a class="personal-main-top-navbar-item" href="#my-publish-page">
+            我的发布
+            <div class="bottom-line" style="display:none;"></div>
+        </a>
     </div>
 
     <div class="personal-main-bottom">
@@ -41,13 +44,16 @@
                 @@include("index-user-task-item.html")
             </div>
             <!-- HTML 我的任务模板 -->
-            <div id="userTaskWrapper" class="left-slide-list" style="background-color: #ffffff">
+            <div id="userTaskWrapper" style="background-color: #ffffff">
                 <ul id="user-task-list">
 
                 </ul>
                 <div id="user-task-load-more" class="weui-loadmore">
                     <i class="weui-loading"></i>
                     <span class="weui-loadmore__tips">正在加载</span>
+                </div>
+                <div id="task-show-no-data" style="display: none">
+                    @@include("common-error-info.html", {"image": "../img/common/no_data.png", "info": "暂时没有数据！"})
                 </div>
             </div>
 
@@ -61,13 +67,16 @@
                 @@include("index-user-publish-item.html")
             </div>
             <!-- HTML 我的发布模板 -->
-            <div id="userPublishWrapper" class="left-slide-list" style="background-color: #ffffff">
+            <div id="userPublishWrapper" style="background-color: #ffffff">
                 <ul id="user-publish-list">
 
                 </ul>
                 <div id="user-publish-load-more" class="weui-loadmore">
                     <i class="weui-loading"></i>
                     <span class="weui-loadmore__tips">正在加载</span>
+                </div>
+                <div id="publish-show-no-data" style="display: none">
+                    @@include("common-error-info.html", {"image": "../img/common/no_data.png", "info": "暂时没有数据！"})
                 </div>
             </div>
         </div>

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,width=device-width,initial-scale=1.0" />
 
     <title>个人资料-编辑</title>
 
@@ -13,16 +13,11 @@
 </head>
 
 <body>
-    <div class="user-info-edit" id="user-info-edit">
-        <!-- 返回 主页面-->
-        <div class="user-backindex">
-            <a href="index.html"><img src="../img/personCenter/index-green.png"></a>
-        </div>
-        <div class="weui-cells my-user-cells">
-            <div class="user-bg user-bg-blur"></div>
+    <div class="user-info-edit" id="user-info-edit" user-id="">
+        <div class="weui-cells weui-cells_form my-user-cells">
             <div class="weui-cell centerdiv">
                 <div class="weui-cell__hd " id="headPortrait">
-                    <a href="javascript:alert('选择图像');" class="user-headimg-edit" id="user-headimg-edit "><img class="headimg " src="../img/personCenter/person-img.jpg "></a>
+                    <a href="javascript:alert('选择图像');" class="user-headimg-edit" id="user-headimg-edit"><img class="headimg " src="../img/personCenter/person-img.jpg"></a>
                 </div>
             </div>
             <div class="weui-cell">
@@ -34,12 +29,12 @@
                 </div>
             </div>
             <div class="weui-cell ">
-                <div class="weui-cell__bd ">
-                    <label class="weui-label" for="user-gender">性别</label>
+                <div class="weui-cell__hd ">
+                    <label class="weui-label" id="user-gender" for="user-gender-edit">性别</label>
                 </div>
-                <div class="weui-cell__ft gender-edit " id="user-gender">
-                    <input type="radio" id="gender-man-radio" name="radio-1-set" class="regular-radio" checked /><label for="gender-man-radio"></label>男
-                    <input type="radio" id="gender-woman-radio" name="radio-1-set" class="regular-radio" /><label for="gender-woman-radio"></label>女
+                <div class="weui-cell__bd gender-edit " id="user-gender">
+                    <input type="radio" id="gender-man-radio" name="radio-1-set" class="regular-radio" value="男" checked/><label for="gender-man-radio"></label>男 &emsp; &emsp;
+                    <input type="radio" id="gender-woman-radio" name="radio-1-set" class="regular-radio" value="女" /><label for="gender-woman-radio"></label>女
                 </div>
             </div>
             <div class="weui-cell weui-cell_select weui-cell_select-after">
@@ -48,9 +43,7 @@
                 </div>
                 <div class="weui-cell__bd">
                     <select class="weui-select" name="select2" id="user-address-edit">
-                        <option value="1">陕西</option>
-                        <option value="2">山西</option>
-                        <option value="3">山东</option>
+                        <option value="">请选择省份</option>
                     </select>
                 </div>
             </div>
@@ -60,53 +53,68 @@
                 </div>
                 <div class="weui-cell__bd">
                     <select class="weui-select" name="select2" id="user-school-edit">
-                        <option value="1">西安电子科技大学</option>
-                        <option value="2">西安交通大学</option>
-                        <option value="3">西北工业大学</option>
+                        <option value="">先选地区再选学校</option>
                     </select>
                 </div>
             </div>
-            <div class="weui-cell weui-cell_vcode">
+            <div class="weui-cell">
                 <div class="weui-cell__hd">
                     <label class="weui-label" for="user-tel-edit">手机号</label>
                 </div>
                 <div class="weui-cell__bd">
                     <input class="weui-input" type="tel" value="" id="user-tel-edit" placeholder="请输入手机号">
                 </div>
-                <div class="weui-cell__ft">
-                    <button class="weui-vcode-btn">获取验证码</button>
+            </div>
+            <div class="weui-cell">
+                <div class="weui-cell__hd">
+                    <label class="weui-label" for="user-qq-edit">QQ号</label>
+                </div>
+                <div class="weui-cell__bd">
+                    <input class="weui-input" type="tel" value="" id="user-qq-edit" placeholder="请输入QQ号">
+                </div>
+            </div>
+            <div class="weui-cell">
+                <div class="weui-cell__hd">
+                    <label class="weui-label" for="user-weixin-edit">微信号</label>
+                </div>
+                <div class="weui-cell__bd">
+                    <input class="weui-input" type="text" value="" id="user-weixin-edit" placeholder="请输入微信号">
                 </div>
             </div>
         </div>
 
-        <div class="weui-uploader user-card-edit" id="user-card-edit ">
-            <div class="weui-uploader__hd">
-                <p class="weui-uploader__title">一卡通或学生证等证件上传</p>
-            </div>
-            <div class="weui-uploader__bd centerdiv">
-                <div class="weui-uploader__input-box">
-                    <input id="uploader-user-card" class="weui-uploader__input" type="file" accept="image/*" multiple="">
+        <!--上传校园卡-->
+        <div class="weui-cells weui-cells_form user-card-edit" id="user-card-edit ">
+            <div class="weui-cell">
+                <div class="weui-cell__bd">
+                    <div class="weui-cells__title card_title">一卡通或学生证等证件上传</div>
+                    <!--上传-->
+                    <div class="weui-uploader">
+                        <div class="weui-uploader__bd centerdiv">
+                            <ul class="weui-uploader__files" id="uploaderFiles"></ul>
+                            <div class="weui-uploader__input-box">
+                                <input id="uploaderInput" class="weui-uploader__input" type="button" />
+                            </div>
+                        </div>
+                    </div>
+                    <!--查看图片-->
+                    <div class="weui-gallery" id="uploaderFiles-gallery">
+                        <span class="weui-gallery__img" data-for-delete=""></span>
+                        <div class="weui-gallery__opr">
+                            <a href="javascript:" class="weui-gallery__del">
+                                <i class="weui-icon-delete weui-icon_gallery-delete"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <label for="weuiAgree" class="weui-agree">
-            <input id="weuiAgree" type="checkbox" class="weui-agree__checkbox">
-            <span class="weui-agree__text">
-                    阅读并同意<a href="javascript:void(0);">《相关条款》</a>
-                </span>
-        </label>
-        <div><a href="javascript:alert( '保存成功');window.location.href='user-show.html'; " class="weui-btn weui-btn_primary user-save-btn ">保存</a></div>
+        <div><a href="javascript:" id="user-info-submit" class="weui-btn weui-btn_primary user-save-btn ">保存</a></div>
     </div>
-    <script src="../../common/js/jquery-2.1.4.js "></script>
-    <script src="../../common/js/fastclick.js "></script>
-    <script>
-        $(function() {
-            FastClick.attach(document.body);
-        });
-    </script>
-    <script src="../../common/js/jquery-weui.min.js"></script>
-    <script type="text/javascript" src="../../common/js/city-picker.js" charset="utf-8"></script>
-    <script src="../js/user-info.js"></script>
+    <!-- common js -->
+    @@include("include/common-js.html", {"info": "this is info."})
+    <!-- common js -->
+    <script src="../js/user-info-edit.js"></script>
 </body>
 
 </html>

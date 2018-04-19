@@ -1,5 +1,6 @@
 package com.alisure.entity;
 
+import com.alisure.weixin.filter.EmojiFilter;
 import org.springframework.jdbc.core.RowMapper;
 
 import java.io.Serializable;
@@ -32,7 +33,7 @@ public class InfoUser implements RowMapper<InfoUser>, Serializable {
         this.openid = openid;
         this.headimgurl = headimgurl;
         this.province = province;
-        this.nickname = nickname;
+        this.nickname = EmojiFilter.filterEmoji(nickname);
         this.sex = sex;
         this.city = city;
         this.country = country;
@@ -45,7 +46,7 @@ public class InfoUser implements RowMapper<InfoUser>, Serializable {
         this.openid = openid;
         this.headimgurl = headimgurl;
         this.province = province;
-        this.nickname = nickname;
+        this.nickname = EmojiFilter.filterEmoji(nickname);
         this.sex = sex;
         this.phone = phone;
         this.qq = qq;
@@ -95,7 +96,7 @@ public class InfoUser implements RowMapper<InfoUser>, Serializable {
     }
 
     public void setNickname(String nickname) {
-        this.nickname = nickname;
+        this.nickname = EmojiFilter.filterEmoji(nickname);
     }
 
     public String getSex() {
