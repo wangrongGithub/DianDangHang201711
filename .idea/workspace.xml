@@ -1,75 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c5046486-a0a7-4939-80e1-bf7ca72eb1da" name="Default" comment="修改任务类型图标">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web/wechat/img/index/dating1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web/wechat/img/personCenter/categoryType-1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web/wechat/img/personCenter/categoryType-2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web/wechat/img/personCenter/categoryType-3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web/wechat/img/personCenter/categoryType-4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web/wechat/img/personCenter/categoryType-5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web/wechat/img/personCenter/categoryType-6.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web/wechat/img/personCenter/categoryType-7.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web/wechat/img/personCenter/categoryType-8.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web/wechat/img/personCenter/grzx3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web/wechat/img/personCenter/grzx5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web/wechat/img/personCenter/pubCancel.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web/wechat/img/personCenter/pubDoing.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web/wechat/img/personCenter/pubDone.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web/wechat/img/personCenter/pubWaitDo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web/wechat/img/personCenter/school-card.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web/wechat/img/personCenter/star.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web/wechat/img/personCenter/star_gray.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web/wechat/img/personCenter/star_org.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web/wechat/img/personCenter/star_red.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web/wechat/img/personCenter/taskDoing.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web/wechat/img/personCenter/taskDone.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web/wechat/img/personCenter/uerCardInit.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web/wechat/img/personCenter/userCard.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/alisure/tool/core/common/CommonLog.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/alisure/tool/core/common/test/CommonLogTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/alisure/weixin/filter/EmojiFilter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web/wechat/css/comment.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web/wechat/js/comment.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web/wechat/js/user-info-edit.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web/wechat/js/user-info-show.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web/wechat/view/comment.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/view/Money.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+    <list default="true" id="c5046486-a0a7-4939-80e1-bf7ca72eb1da" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/alisure/controller/TaskController.java" afterPath="$PROJECT_DIR$/src/main/java/com/alisure/controller/TaskController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/alisure/dao/TaskDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/alisure/dao/TaskDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/alisure/entity/InfoUser.java" afterPath="$PROJECT_DIR$/src/main/java/com/alisure/entity/InfoUser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/alisure/service/TaskService.java" afterPath="$PROJECT_DIR$/src/main/java/com/alisure/service/TaskService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/css/index-main.css" afterPath="$PROJECT_DIR$/src/main/webapp/web/wechat/css/index-main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/css/personcenter.css" afterPath="$PROJECT_DIR$/src/main/webapp/web/wechat/css/personcenter.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/css/task-item-style.css" afterPath="$PROJECT_DIR$/src/main/webapp/web/wechat/css/task-item-style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/css/user-info.css" afterPath="$PROJECT_DIR$/src/main/webapp/web/wechat/css/user-info.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/js/index-task-list.js" afterPath="$PROJECT_DIR$/src/main/webapp/web/wechat/js/index-task-list.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/js/personal-center.js" afterPath="$PROJECT_DIR$/src/main/webapp/web/wechat/js/personal-center.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/js/pre-deal.js" afterPath="$PROJECT_DIR$/src/main/webapp/web/wechat/js/pre-deal.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/js/task-main.js" afterPath="$PROJECT_DIR$/src/main/webapp/web/wechat/js/task-main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/view/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/web/wechat/view/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/view/user-edit.html" afterPath="$PROJECT_DIR$/src/main/webapp/web/wechat/view/user-edit.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/web/wechat/view/user-show.html" afterPath="$PROJECT_DIR$/src/main/webapp/web/wechat/view/user-show.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/web/common/less/color-less.css" afterPath="$PROJECT_DIR$/src/web/common/less/color-less.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/web/wechat/css/index-main.css" afterPath="$PROJECT_DIR$/src/web/wechat/css/index-main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/web/wechat/css/personcenter.css" afterPath="$PROJECT_DIR$/src/web/wechat/css/personcenter.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/web/wechat/css/task-item-style.css" afterPath="$PROJECT_DIR$/src/web/wechat/css/task-item-style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/web/wechat/css/user-info.css" afterPath="$PROJECT_DIR$/src/web/wechat/css/user-info.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/web/wechat/js/index-task-list.js" afterPath="$PROJECT_DIR$/src/web/wechat/js/index-task-list.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/web/wechat/js/personal-center.js" afterPath="$PROJECT_DIR$/src/web/wechat/js/personal-center.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/web/wechat/js/pre-deal.js" afterPath="$PROJECT_DIR$/src/web/wechat/js/pre-deal.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/web/wechat/js/publish.js" afterPath="$PROJECT_DIR$/src/web/wechat/js/publish.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/web/wechat/js/task-main.js" afterPath="$PROJECT_DIR$/src/web/wechat/js/task-main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/web/wechat/view/include/index-search.html" afterPath="$PROJECT_DIR$/src/web/wechat/view/include/index-search.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/web/wechat/view/include/index-task.html" afterPath="$PROJECT_DIR$/src/web/wechat/view/include/index-task.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/web/wechat/view/include/index-user-publish-item.html" afterPath="$PROJECT_DIR$/src/web/wechat/view/include/index-user-publish-item.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/web/wechat/view/include/index-user-task-item.html" afterPath="$PROJECT_DIR$/src/web/wechat/view/include/index-user-task-item.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/web/wechat/view/include/index-user.html" afterPath="$PROJECT_DIR$/src/web/wechat/view/include/index-user.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/web/wechat/view/personCenter.html" afterPath="$PROJECT_DIR$/src/web/wechat/view/personCenter.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/web/wechat/view/user-edit.html" afterPath="$PROJECT_DIR$/src/web/wechat/view/user-edit.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/web/wechat/view/user-show.html" afterPath="$PROJECT_DIR$/src/web/wechat/view/user-show.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/readme.txt" afterPath="$PROJECT_DIR$/readme.md" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -146,7 +80,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/alisure/service/AreaService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/alisure/controller/AreaController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/alisure/service/SchoolService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/alisure/entity/InfoTask.java" />
@@ -197,6 +130,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/alisure/weixin/template/TemplateContent.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/alisure/weixin/template/Template.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/alisure/service/TaskService.java" />
+        <option value="$PROJECT_DIR$/readme.md" />
       </list>
     </option>
   </component>
@@ -224,9 +158,10 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="953" />
-    <option name="width" value="974" />
-    <option name="height" value="1047" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -257,6 +192,64 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="DianDangHang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DianDangHang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DianDangHang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wechat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DianDangHang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DianDangHang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DianDangHang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DianDangHang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -974,16 +967,23 @@
       <workItem from="1504923675551" duration="5221000" />
       <workItem from="1505053963749" duration="5124000" />
       <workItem from="1506743817643" duration="84549000" />
-      <workItem from="1524129078172" duration="291000" />
+      <workItem from="1524129078172" duration="1331000" />
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="整理代码">
+      <created>1524129446110</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1524129446110</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="107468000" />
+    <option name="totallyTimeSpent" value="108508000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="953" y="0" width="974" height="1047" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1008,11 +1008,11 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2595838" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32968238" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44143167" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15443593" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23924051" sideWeight="0.32692307" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.48030636" sideWeight="0.6730769" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23400854" sideWeight="0.6730769" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22054794" sideWeight="0.3031609" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1087,6 +1087,10 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="整理代码" />
+    <option name="LAST_COMMIT_MESSAGE" value="整理代码" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <option name="time" value="34" />
@@ -1098,14 +1102,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/alisure/tool/core/CoreAlisure.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/images/entertainment.png" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/error/error.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
@@ -1123,13 +1119,6 @@
         <state relative-caret-position="150">
           <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gulpfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="3" column="13" lean-forward="true" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1424,18 +1413,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gulpfile.config.js">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="11" lean-forward="false" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+        <state relative-caret-position="150">
+          <caret line="6" column="19" lean-forward="true" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/gulpfile.config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="3" column="8" lean-forward="true" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
+        <state relative-caret-position="168">
+          <caret line="15" column="12" lean-forward="true" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="59" column="3" lean-forward="true" selection-start-line="59" selection-start-column="3" selection-end-line="59" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="25">
+            <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/alisure.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="63" column="8" lean-forward="true" selection-start-line="63" selection-start-column="8" selection-end-line="63" selection-end-column="8" />
           <folding />
         </state>
       </provider>
